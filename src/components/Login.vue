@@ -35,10 +35,16 @@ export default {
     methods:{
             sendInfo: function(e){
                 if(this.username == '' && this.password == '') return alert('te falta completar datos')
-                const response = axios.post('https://bembosv2.herokuapp.com/colaborador/', {
+                const response = axios.post('https://bembosv2.herokuapp.com/api/token', {
                     username: this.username,
                     password: this.password
-                })
+                }) 
+                try{
+                    
+                } 
+                catch{
+
+                }
                 console.dir(response)
             }
     },
