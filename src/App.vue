@@ -1,21 +1,34 @@
 <template>
   <div id="app">
     <div id="nav">
-      <Login></Login>
-
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
+      <!-- <Login></Login> -->
+      <Cajero></Cajero>
+      <!-- <router-link to="/">Home</router-link> | -->
+      <!-- <router-link to="/about">About</router-link> -->
     </div>
-    <!-- <router-view/> -->
+    <!-- <router-view/> --> 
   </div>
 </template>
+
 <script>
-import Login from './components/Login'
+import Login from './components/Login.vue'
+import Cajero from './components/Cajero.vue'
+// import HelloWord from './components/HelloWorld.vue'
+
 export default {
    name: 'app',
+
    components:{
-     Login
-   }
+     Login,
+    //  HelloWord
+     Cajero
+   },
+  //  methods: {
+  //    loginRouter: function(){
+  //      <Login></Login>
+  //    }
+  //  }
+
 
   
 }
