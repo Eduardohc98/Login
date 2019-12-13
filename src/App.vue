@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <!-- <Login></Login> -->
-      <Cajero></Cajero>
+      <!-- <Cajero></Cajero> -->
+      <Cocina></Cocina>
+
+
       <!-- <router-link to="/">Home</router-link> | -->
       <!-- <router-link to="/about">About</router-link> -->
     </div>
@@ -13,6 +16,7 @@
 <script>
 import Login from './components/Login.vue'
 import Cajero from './components/Cajero.vue'
+import Cocina from './components/Cocina.vue'
 // import HelloWord from './components/HelloWorld.vue'
 
 export default {
@@ -21,7 +25,8 @@ export default {
    components:{
      Login,
     //  HelloWord
-     Cajero
+     Cajero,
+     Cocina
    },
   //  methods: {
   //    loginRouter: function(){

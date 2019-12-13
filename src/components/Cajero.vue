@@ -7,7 +7,7 @@
 
             <div class="enlaces-paginas">
     <!-- Iconos de Redes Sociales- buscar buenos iconos, de preferencia oscuros -->
-                <img src="../assets/img/facebook.png" alt="facebook" class="redes-sociales">
+                <!-- <img src="../assets/img/facebook.png" alt="facebook" class="redes-sociales"> -->
                 <!-- <a href="https://www.facebook.com/bembos/?epa=SEARCH_BOX" target="_blank" class="icon-facebook">F</a>
                 <a href="https://www.youtube.com/?gl=PE&tab=r1" target="_blank" class="icon-youtube"></a>
                 <a href="https://twitter.com/" target="_blank" class="icon-twitter"></a> -->
