@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 *{
     box-sizing: border-box;
     font-family: 'Cinzel', serif;}
@@ -165,7 +165,8 @@ footer{
     grid-template-rows: 1fr 1fr 1fr 1fr ;
     grid-gap: 20px;
     padding: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -293,7 +294,7 @@ footer{
 
         .pie-pagina{
             width: 100%;
-            height: 300px;
+            height: 150px;
             background-color: #10108a;
             /* background-image: url(./img/img-logo.jpg);
             background-position: center;
@@ -304,9 +305,5 @@ footer{
 }
 
 
-
-
-
-</style>
-
+</style>>
 

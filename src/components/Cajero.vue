@@ -78,14 +78,6 @@
                 <BUtton>COMPRAR</BUtton>
             </div>
 
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
             <div class="card">
                 <div class="img-card"></div>
                 <button>Promo Bembos Clásica</button>
@@ -94,37 +86,7 @@
                 <BUtton>COMPRAR</BUtton>
             </div>
 
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
+            
         </div>
 
         <div class="titulo-mayor">
@@ -198,37 +160,6 @@
                 <BUtton>COMPRAR</BUtton>
             </div>
 
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
         </div>
     </main>
 <!-- fin del cuerpo con todas las card -->
@@ -269,7 +200,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 *{
     box-sizing: border-box;
 }
@@ -446,7 +378,7 @@ header label:hover{
 }
 
 .menu li:hover{
-   border-bottom: 2px solid #fbb905;
+   border-bottom: 2px solid rgb(226, 4, 4,0.8) ;
    cursor: pointer; 
    /* color: white; */
    /* transition: 0.5s; */
@@ -460,7 +392,7 @@ header label:hover{
 .card-contenedor{
     margin-top: 30px;
     background-color: white;
-    border: 2px solid rgb(20, 20, 134);
+    /* border: 2px solid rgb(20, 20, 134); */
     border-radius: 15px;
     width: 900px;
     height: 900px;
@@ -477,10 +409,10 @@ header label:hover{
 }
 .card{
     /* max-width: 28%; */
-    width: 250px;
+    /* width: 250px; */
     height: 355px;
     background-color: white;
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     /* border-radius: 15px; */
     margin-top: 40px;
     
@@ -561,22 +493,23 @@ button{
     background-color: rgb(20, 20, 134);
     color: white;
     border-radius: 5px;
-    border: 1px solid gold;
+    border: 1px solid rgb(20, 20, 134);
 }
 
 span{
     width: 100%;
     color: rgb(20, 20, 134);
-    border: 1px solid #ffb500;
+    /* border: 1px solid #ffb500; */
     display: block;
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 p{
     border-radius: 0 0 5px 5px;
     background: #ffb500;
     text-align: center;
+    margin: 0;
 }
 
 strong{
@@ -648,7 +581,7 @@ strong{
       /* <---------cabecera-enlaces-movile--------> */
       .conjunto-enlaces{
         width: 100%;
-        height: 100px;
+        height: 140px;
         background-color: rgb(20, 20, 134) ;
         display: flex;
         margin-bottom: 0;
@@ -821,4 +754,6 @@ strong{
     /* <-----------fin de footer-movile----------> */
 }
 
-</style>
+</style>>
+
+

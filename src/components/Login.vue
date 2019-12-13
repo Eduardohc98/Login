@@ -37,7 +37,7 @@ export default {
             sendInfo: function(e){
                 if(this.username == '' && this.password == '') return alert('te falta completar datos')
                 const response = axios.post('https://bembos-api.herokuapp.com/api/token', {
-                    headers: {'content-type': 'json/form-data'},
+                    headers: {'content-type': 'multiparth/form-data'},
                     username: this.username,
                     password: this.password
                 }) 
@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .login{
     width: 100%;
     height: 100vh;
@@ -115,7 +115,7 @@ export default {
     border: 2px solid rgb(255, 166, 0);
     cursor: pointer;
 }
+</style>>
 
 
 
-</style>

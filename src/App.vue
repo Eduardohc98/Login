@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <Login></Login> -->
-      <!-- <Cajero></Cajero> -->
+      <Login></Login>
+      <Cajero></Cajero>
       <Cocina></Cocina>
 
 
@@ -17,14 +17,13 @@
 import Login from './components/Login.vue'
 import Cajero from './components/Cajero.vue'
 import Cocina from './components/Cocina.vue'
-// import HelloWord from './components/HelloWorld.vue'
+
 
 export default {
    name: 'app',
 
    components:{
      Login,
-    //  HelloWord
      Cajero,
      Cocina
    },
