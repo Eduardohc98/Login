@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <Login></Login>
+      <!-- <Login></Login> -->
       <Cajero></Cajero>
-      <Cocina></Cocina>
+      <!-- <Cocina></Cocina> -->
 
 
-      <!-- <router-link to="/">Home</router-link> | -->
-      <!-- <router-link to="/about">About</router-link> -->
+      <!-- <router-link to="/">Caja</router-link> |
+      <router-link to="/cocinero">Cocinero</router-link> -->
     </div>
-    <!-- <router-view/> --> 
+    <!-- <router-view/>  -->
   </div>
 </template>
 

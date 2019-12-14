@@ -7,7 +7,9 @@
 
             <div class="enlaces-paginas">
     <!-- Iconos de Redes Sociales- buscar buenos iconos, de preferencia oscuros -->
-                <!-- <img src="../assets/img/facebook.png" alt="facebook" class="redes-sociales"> -->
+                <img src="../assets/img/facebook.png" alt="facebook" class="redes-sociales">
+                 <img src="../assets/img/descarga.png" alt="facebook" class="redes-sociales">
+                  <img src="../assets/img/twitter.png" alt="facebook" class="redes-sociales">
                 <!-- <a href="https://www.facebook.com/bembos/?epa=SEARCH_BOX" target="_blank" class="icon-facebook">F</a>
                 <a href="https://www.youtube.com/?gl=PE&tab=r1" target="_blank" class="icon-youtube"></a>
                 <a href="https://twitter.com/" target="_blank" class="icon-twitter"></a> -->
@@ -37,55 +39,25 @@
     <!---------------- fin de cabesera --------------->
 
      <!-- ---------carrito de compras----------- -->
-    <div class="carrito-compras">
+    <div class="carrito-compras" v-show="this.carrito == false" @click="ocultarCarrito" v-model="compras">
         <H3>Informacion de Pedido</H3>
-        <div class="coleccion">
-            <h5>Hamburguesa</h5>
-            <b>$/12.50</b>
-        </div>
-
-        <div class="coleccion">
-            <h5>Hamburguesa</h5>
-            <b>$/12.50</b>
+        <div class="coleccion" v-for="item in compras">
+            <h5>{{item.name}}</h5>
+            <b>S/{{item.price}}</b>
         </div>
     </div>
-    <!---------- fin de carrityo de compras----------- -->
+    <!---------- fin de carrito de compras----------- -->
 
     <!-- cuerpo con todas las card -->
     <main>
         <div class="card-contenedor">
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
+            <div class="card" v-for="item in items" v-model="items">
+                <div  class="img-card"> <img :src="item.image"> </div>
+                <h4>{{item.name}}</h4>
+                <span>S/{{item.price}}</span>
+                <p>¡Acumula<strong>13Pts!</strong></p>
+                <button @click="addItem">COMPRAR</button>
             </div>
-
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
             
         </div>
 
@@ -96,65 +68,11 @@
         </div>
 
         <div class="card-contenedor">
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-            <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
+            
 
              <div class="card">
                 <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
-                <span>S/. 13.90</span>
-                <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
-            </div>
-
-             <div class="card">
-                <div class="img-card"></div>
-                <button>Promo Bembos Clásica</button>
+                <h4>Promo Bembos Clásica</h4>
                 <span>S/. 13.90</span>
                 <p>¡Acumula <strong>13Pts!</strong></p>
                 <BUtton>COMPRAR</BUtton>
@@ -167,14 +85,14 @@
     <!-- ----------------footer----------- -->
     <footer>
         <div class="contenedor">
-            <div class="derechos-reservados">
+            <ul class="derechos-reservados">
                 <a href="#">NOSOTROS</a>
                 <a href="#">LOCALES</a>
                 <a href="#">CUMPLEAÑOS</a>
                 <a href="#">ATENCION AL CLIENTE</a>
                 <a href="#">TERMINOS Y CONDICIONES</a>
                 <a href="#">DERECHOS RESERVADOS</a>
-            </div>
+            </ul>
 
             <img src="../assets/img/images.jpg" alt="banner" class="logo-footer">
 
@@ -193,7 +111,28 @@ export default {
     data(){
         return{
             items: [],
-            compras: []
+            compras: [],
+            carrito: false
+        }
+    },
+    created(){
+         axios.get("https://bembos-api.herokuapp.com/api/supply/")
+         .then(Response => {
+             this.items = Response.data 
+             console.log(Response)
+         })
+    },
+    methods: {
+        addItem: function(item){
+                axios.get("https://bembos-api.herokuapp.com/api/supply/")
+                .then(Response => {
+                    let dato = this.items 
+                    let comprasCarrito = dato.data
+                    
+                })
+        },
+        ocultarCarrito: function(){
+            this.carrito == true
         }
     }
     
@@ -215,6 +154,7 @@ body{
 
 img{
    max-width: 100%;
+  
 }
 
 
@@ -250,12 +190,11 @@ header{
 
 
 .redes-sociales{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: rgb(20, 20, 134);
     max-width: 100%;
     display: flex;
-    
 }
 
 
@@ -292,12 +231,12 @@ a:hover{
 
 /* <---------carrito de compras------------> */
 .carrito-compras{
-    display: none;
+    display: block;
     width: 300px;
     height: 300px;
     background-color: white;
     border: 2px solid  #ffb500;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     position: fixed;
     left: 65%;
     overflow-y: auto;
@@ -307,7 +246,7 @@ a:hover{
 .coleccion{
     width: 100%;
     height: 40px;
-    background-color:  gold;
+    /* background-color:  gold; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -409,7 +348,7 @@ header label:hover{
 }
 .card{
     /* max-width: 28%; */
-    /* width: 250px; */
+    width: 60%;
     height: 355px;
     background-color: white;
     /* border: 2px solid gold; */
@@ -422,9 +361,9 @@ header label:hover{
     max-width: 100%;
     /* background-color: yellowgreen; */
     height: 220px;
-    background-image: url(https://www.bembos.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/r/promo-bembos-clasica.webp);
+    /* background-image: url(https://www.bembos.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/r/promo-bembos-clasica.webp);
     background-size: 180px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     border-radius: 15px;
 }
 
@@ -502,14 +441,16 @@ span{
     /* border: 1px solid #ffb500; */
     display: block;
     text-align: center;
+    font-weight: bold;
     /* margin-top: 10px; */
 }
 
 p{
     border-radius: 0 0 5px 5px;
-    background: #ffb500;
+    /* background: #ffb500; */
     text-align: center;
     margin: 0;
+    margin-bottom: 5px; 
 }
 
 strong{
@@ -537,6 +478,7 @@ strong{
     grid-gap: 10px;
     text-align: center;
     align-items: center;
+    color: white;
 }
 
 
@@ -571,7 +513,7 @@ strong{
         background-color: rgb(20, 20, 134);
         color: white;
         border-radius: 5px;
-        border: 1px solid gold;
+        border: 1px solid rgb(20, 20, 134);
     }
 
     header label {
@@ -686,7 +628,7 @@ strong{
     .card-contenedor{
         margin-top: 30px;
         background-color: white;
-        border: 2px solid rgb(20, 20, 134);
+        /* border: 2px solid rgb(20, 20, 134); */
         border-radius: 15px;
         width: 800px;
         height: 900px;
@@ -695,16 +637,18 @@ strong{
         margin-right: auto;
         display: grid;
         align-content: center;
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr;
         grid-gap: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .card{
         max-width: 95%;
         height: 400px;
         background-color: white;
-        border: 2px solid gold;
-        border-radius: 15px;
+        /* border: 2px solid gold; */
+        /* border-radius: 15px; */
         margin-top: 0px;
     }
 
