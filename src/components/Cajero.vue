@@ -7,9 +7,9 @@
 
             <div class="enlaces-paginas">
     <!-- Iconos de Redes Sociales- buscar buenos iconos, de preferencia oscuros -->
-                <img src="../assets/img/facebook.png" alt="facebook" class="redes-sociales">
+                <!-- <img src="../assets/img/facebook.png" alt="facebook" class="redes-sociales">
                  <img src="../assets/img/descarga.png" alt="facebook" class="redes-sociales">
-                  <img src="../assets/img/twitter.png" alt="facebook" class="redes-sociales">
+                  <img src="../assets/img/twitter.png" alt="facebook" class="redes-sociales"> -->
                 <!-- <a href="https://www.facebook.com/bembos/?epa=SEARCH_BOX" target="_blank" class="icon-facebook">F</a>
                 <a href="https://www.youtube.com/?gl=PE&tab=r1" target="_blank" class="icon-youtube"></a>
                 <a href="https://twitter.com/" target="_blank" class="icon-twitter"></a> -->
@@ -39,9 +39,9 @@
     <!---------------- fin de cabesera --------------->
 
      <!-- ---------carrito de compras----------- -->
-    <div class="carrito-compras" v-show="this.carrito == false" @click="ocultarCarrito" v-model="compras">
+    <div class="carrito-compras" v-show="this.carrito == false">
         <H3>Informacion de Pedido</H3>
-        <div class="coleccion" v-for="item in compras">
+        <div class="coleccion" v-for="item in compras" v-model="items">
             <h5>{{item.name}}</h5>
             <b>S/{{item.price}}</b>
         </div>
@@ -53,10 +53,10 @@
         <div class="card-contenedor">
             <div class="card" v-for="item in items" v-model="items">
                 <div  class="img-card"> <img :src="item.image"> </div>
-                <h4>{{item.name}}</h4>
-                <span>S/{{item.price}}</span>
+                <h4 >{{item.name}}</h4>
+                <span >S/{{item.price}}</span>
                 <p>¡Acumula<strong>13Pts!</strong></p>
-                <button @click="addItem">COMPRAR</button>
+                <button class="btn" @click="addItem">AGREGAR A CARRITO</button>
             </div>
             
         </div>
@@ -75,7 +75,7 @@
                 <h4>Promo Bembos Clásica</h4>
                 <span>S/. 13.90</span>
                 <p>¡Acumula <strong>13Pts!</strong></p>
-                <BUtton>COMPRAR</BUtton>
+                <button class="btn">AGREGAR A CARRITO </button>
             </div>
 
         </div>
@@ -119,24 +119,27 @@ export default {
          axios.get("https://bembos-api.herokuapp.com/api/supply/")
          .then(Response => {
              this.items = Response.data 
-             console.log(Response)
+            //  console.log(Response)
          })
     },
     methods: {
-        addItem: function(item){
-                axios.get("https://bembos-api.herokuapp.com/api/supply/")
-                .then(Response => {
-                    let dato = this.items 
-                    let comprasCarrito = dato.data
-                    
-                })
+        addItem: function(e){
+                if(e.target.className == 'btn'){
+                    let compra = e.target.parentElement.textContent
+                    let dato1 = compra.name
+
+                    console.log(dato1)
+
+                      
+                }
+                }
         },
         ocultarCarrito: function(){
             this.carrito == true
         }
     }
     
-}
+
 </script>
 
 <style scoped>
@@ -246,6 +249,7 @@ a:hover{
 .coleccion{
     width: 100%;
     height: 40px;
+    
     /* background-color:  gold; */
     display: flex;
     justify-content: space-around;
